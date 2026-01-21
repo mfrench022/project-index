@@ -79,6 +79,19 @@ footer button {
     margin-block-end: 0;
 }
 
+
+/* Bringing in cursor effect from my manuscript project for fun */
+
+.cursor {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 @media (width < 1000px) {
     body {
     padding-inline: 2rem;
