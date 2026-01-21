@@ -73,6 +73,7 @@ footer {
     border-block-start: solid;
     border-block-start-width: 0.35rem;
     background-color: var(--background-light);
+    backdrop-filter: blur(0.1rem);
 }
 
 footer button {
@@ -92,7 +93,7 @@ footer button {
   }
 }
 
-@media (width < 1000px) {
+@media (width < 1200px) {
     body {
     padding-inline: 2rem;
 }
