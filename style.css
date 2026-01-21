@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    font-size: 120%;
+    --color1: darkblue;
+    --color2: lightblue;
+    --background: white;
+    --background-light: rgba(255, 255, 255, 0.645);
+    --padding: 1.5rem;
+    --body-copy: 1rem;
+}
+
+body {
+    padding-block-start: calc(1 * var(--padding));
+    padding-inline: 25%;
+}
+
+.project {
+    padding-block: var(--padding);
+    border-block-start: solid;
+    border-block-start-width: 0.35rem;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: calc(3* var(--body-copy));
+    font-family: "Aldrich", sans-serif;
+}
+
+h2, p {
+    font-family: "Libre Franklin", sans-serif;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+button {
+    background-color: var(--color2);
+    padding: var(--padding);
+    border-radius: 3rem;
+    margin-block-end: var(--padding);
+}
+
+button:hover {
+    background-color: var(--color1);
+    color: var(--background);
+    transition: 200ms ease-in-out;
+}
+
+header h1 {
+    margin-block-end: var(--padding);
+}
+
+header {
+    margin-block-end: calc(2*var(--padding));
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: left;
+    padding-block: 1rem;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    padding-inline-start: 2rem;
+    column-gap: 2rem;
+    border-block-start: solid;
+    border-block-start-width: 0.35rem;
+    background-color: var(--background-light);
+}
+
+footer button {
+    padding-block: 0.5rem;
+    margin-block-end: 0;
+}
+
+@media (width < 1000px) {
+    body {
+    padding-inline: 2rem;
+}
+}
