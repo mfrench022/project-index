@@ -2,94 +2,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    font-size: 120%;
-    --color1: darkblue;
-    --color2: lightblue;
-    --background: rgb(244, 238, 238);
-    --background-light: rgba(255, 255, 255, 0.645);
-    --padding: 1.5rem;
-    --body-copy: 1rem;
-    --footer-height: 4rem;
+	font-size: 120%;
+	--color1: darkblue;
+	--color2: white;
+	--background: rgb(244, 238, 238);
+	--background-light: rgba(255, 255, 255, 0.645);
+	--padding: 1.5rem;
+	--body-copy: 1rem;
+	--footer-height: 4rem;
+	--shadow: drop-shadow(0 0 0.8rem rgb(255, 255, 255));
 }
 
 body {
-    padding-block-start: var(--padding);
-    padding-block-end: var(--footer-height);
-    padding-inline: 25%;
-    
-    /* I was looking for an interesting gradient for a background of my index */
-    /* Saw this technique for gradient mixing with blend modes on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Images/Using_gradients */
-    /* By layering gradients in opposite directions and using a blend mode, the result is a nice complex blend */
+	padding-block-start: var(--padding);
+	padding-block-end: var(--footer-height);
+	padding-inline: 25%;
+	
+	/* I was looking for an interesting gradient for a background of my index */
+	/* Saw this technique for gradient mixing with blend modes on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Images/Using_gradients */
+	/* By layering gradients in opposite directions and using a blend mode, the result is a nice complex blend */
 
-    background:
-    linear-gradient(to right, #5500ff, #00ff55),
-    linear-gradient(to top, red, blue);
-    background-blend-mode: screen;
+	background:
+	linear-gradient(to right, #5468b9, #ff7bff),
+	linear-gradient(to top, rgb(96, 252, 153), rgb(82, 53, 249));
+	background-blend-mode: screen;
 }
 
 .project {
-    padding-block: var(--padding);
-    border-block-start: solid;
-    border-block-start-width: 0.35rem;
+	padding-block: var(--padding);
+	border-block-start: solid;
+	border-block-start-width: 0.35rem;
 }
 
 h1 {
-    font-weight: 700;
-    font-size: calc(3* var(--body-copy));
-    font-family: "Aldrich", sans-serif;
+	font-weight: 700;
+	font-size: calc(3* var(--body-copy));
+	font-family: "Aldrich", sans-serif;
 }
 
 h2, p {
-    font-family: "Libre Franklin", sans-serif;
+	font-family: "Libre Franklin", sans-serif;
 }
 
 h2 {
-    font-weight: 700;
+	font-weight: 700;
 }
 
 button {
-    background-color: var(--color2);
-    padding-block: calc(var(--padding)/2);
-    padding-inline: var(--padding);
-    border-radius: 3rem;
-    margin-block-end: var(--padding);
-    filter: drop-shadow(0 0 0.35rem rgb(146, 231, 255));
+
+	background: radial-gradient(ellipse,rgb(254, 255, 214) 0%, rgba(255, 255, 255, 1) 80%);
+
+	padding-block: calc(var(--padding)/2);
+	padding-inline: var(--padding);
+	border-radius: 3rem;
+	margin-block-end: var(--padding);
+	filter: var(--shadow);
 }
 
 button:hover {
-    background-color: var(--color1);
-    color: var(--background);
-    transition: 200ms ease-in-out;
-    filter: drop-shadow(0 0 0.35rem rgb(0, 6, 128));
+	background-color: var(--color1);
+	color: var(--background);
+	transition: 200ms ease-in-out;
+	filter: drop-shadow(0 0 0.35rem rgb(0, 6, 128));
 }
 
 header h1 {
-    margin-block-end: var(--padding);
+	margin-block-end: var(--padding);
 }
 
 header {
-    margin-block-end: var(--padding);
+	margin-block-end: var(--padding);
 }
 
 footer {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    justify-content: left;
-    padding-block: calc(var(--padding) / 2);
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    padding-inline-start: var(--padding);
-    column-gap: var(--padding);
-    border-block-start: solid;
-    border-block-start-width: 0.35rem;
-    background-color: var(--background-light);
-    backdrop-filter: blur(0.1rem);
+	display: flex;
+	position: fixed;
+	width: 100%;
+	justify-content: left;
+	padding-block: calc(var(--padding) / 2);
+	inset-block-end: 0;
+	inset-inline-start: 0;
+	padding-inline-start: var(--padding);
+	column-gap: var(--padding);
+	border-block-start: solid;
+	border-block-start-width: 0.35rem;
+	background-color: var(--background-light);
+	backdrop-filter: blur(0.1rem);
 }
 
 footer button {
-    margin-block-end: 0;
-    padding-block: calc(var(--padding)/4);
+	margin-block-end: 0;
+	padding-block: calc(var(--padding)/4);
 }
 
 /* Bringing in cursor effect from my manuscript project for fun */
@@ -100,24 +103,24 @@ footer button {
 
 @keyframes blink {
   50% {
-    opacity: 0;
+	opacity: 0;
   }
 }
 
 @media (width < 1200px) {
-    body {
-    padding-inline: 2rem;
+	body {
+	padding-inline: 2rem;
 }
 }
 
 @media (width < 500px) {
-    :root {
-        font-size: 90%;
-    }
+	:root {
+		font-size: 90%;
+	}
 
-    h1 {
-        font-size: calc(2* var(--body-copy));
-    }
+	h1 {
+		font-size: calc(2* var(--body-copy));
+	}
 
 
 }
