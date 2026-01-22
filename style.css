@@ -3,14 +3,14 @@
 
 :root {
 	font-size: 120%;
-	--color1: darkblue;
-	--color2: white;
+	--color1: black;
+	--color2: rgb(243, 243, 243);
 	--background: rgb(244, 238, 238);
 	--background-light: rgba(255, 255, 255, 0.645);
 	--padding: 1.5rem;
 	--body-copy: 1rem;
 	--footer-height: 4rem;
-	--shadow: drop-shadow(0 0 0.8rem rgb(255, 255, 255));
+	--shadow: 0 0 0.8rem rgb(255, 255, 255);
 }
 
 body {
@@ -23,9 +23,9 @@ body {
 	/* By layering gradients in opposite directions and using a blend mode, the result is a nice complex blend */
 
 	background:
-	linear-gradient(to right, #5468b9, #ff7bff),
-	linear-gradient(to top, rgb(96, 252, 153), rgb(82, 53, 249));
-	background-blend-mode: screen;
+	linear-gradient(to right, #717171, #191919),
+	linear-gradient(to top, rgb(96, 96, 96), rgb(20, 20, 20));
+	background-blend-mode: overlay;
 }
 
 .project {
@@ -38,10 +38,16 @@ h1 {
 	font-weight: 700;
 	font-size: calc(3* var(--body-copy));
 	font-family: "Aldrich", sans-serif;
+	color: var(--background);
+}
+
+button h2 {
+	color: var(--color1);
 }
 
 h2, p {
 	font-family: "Libre Franklin", sans-serif;
+	color: var(--background);
 }
 
 h2 {
@@ -56,14 +62,15 @@ button {
 	padding-inline: var(--padding);
 	border-radius: 3rem;
 	margin-block-end: var(--padding);
-	filter: var(--shadow);
+	box-shadow: var(--shadow);
 }
 
 button:hover {
-	background-color: var(--color1);
-	color: var(--background);
+	background: linear-gradient(0deg,rgba(206, 224, 224, 0.45) 0%, rgba(201, 201, 201, 0.4) 23%, rgba(235, 232, 232, 0.4) 43%, rgba(201, 201, 201, 0.45) 74%, rgba(206, 224, 224, 0.4) 100%);;
+	color: var(--color2);
 	transition: 200ms ease-in-out;
-	filter: drop-shadow(0 0 0.35rem rgb(0, 6, 128));
+	box-shadow: none;
+	mix-blend-mode: lighten;
 }
 
 header h1 {
@@ -86,8 +93,8 @@ footer {
 	column-gap: var(--padding);
 	border-block-start: solid;
 	border-block-start-width: 0.35rem;
-	background-color: var(--background-light);
-	backdrop-filter: blur(0.1rem);
+	/* background-color: var(--background-light);
+	backdrop-filter: blur(0.1rem); */
 }
 
 footer button {
