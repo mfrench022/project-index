@@ -123,12 +123,13 @@ footer {
 	width: 100%;
 	justify-content: left;
 	padding-block-end: calc(var(--padding) / 2);
-	padding-block-start: calc((var(--padding) / 2) + 0.35rem);
+	padding-block-start: calc((var(--padding) / 2));
 	inset-block-end: 0;
 	inset-inline-start: 0;
 	column-gap: var(--padding);
 	background-color: var(--background-light);
 	backdrop-filter: blur(0.2rem);
+	box-shadow: var(--shadow);
 }
 
 footer button {
@@ -138,6 +139,9 @@ footer button {
 
 img {
 	padding-block-start: var(--padding);
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 /* Bringing in cursor effect from my manuscript project for fun */
@@ -157,17 +161,17 @@ img {
 
 	img, .project p {
 		padding-inline: 0;
+		margin-inline: var(--padding);
 	}
 
-	button {
+	.project button {
 		margin-inline-start: 0;
+		margin-inline: var(--padding);
 	}
 
-.project {
-
-	margin-inline: var(--padding);
-}
-
+	img {
+		width: calc(100% - (2 * var(--padding)));
+	}
 
 }
 
