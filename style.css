@@ -91,7 +91,7 @@ p {
 
 button {
 
-	background: radial-gradient(ellipse,rgb(254, 255, 214) 0%, rgba(255, 255, 255, 1) 80%);
+	background: radial-gradient(ellipse,rgb(221, 255, 251) 0%, rgba(255, 255, 255, 1) 80%);
 	padding-block: calc(var(--padding)/2);
 	padding-inline: var(--padding);
 	margin-inline-start: 25%;
