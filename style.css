@@ -26,6 +26,7 @@ body {
 	inset-inline-start: 0;
 	inset-block-start: 0;
 	z-index: -10;
+
 	/* I was looking for an interesting gradient for a background of my index */
 	/* Saw this technique for gradient mixing with blend modes on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Images/Using_gradients */
 	/* By layering gradients in opposite directions and using a blend mode, the result is a nice complex blend */
@@ -90,7 +91,6 @@ p {
 }
 
 button {
-
 	background: radial-gradient(ellipse,rgb(221, 255, 251) 0%, rgba(255, 255, 255, 1) 80%);
 	padding-block: calc(var(--padding)/2);
 	padding-inline: var(--padding);
@@ -157,8 +157,6 @@ img {
 }
 
 @media (width < 1200px) {
-
-
 	img, .project p {
 		padding-inline: 0;
 		margin-inline: var(--padding);
@@ -172,7 +170,6 @@ img {
 	img {
 		width: calc(100% - (2 * var(--padding)));
 	}
-
 }
 
 @media (width < 550px) {
@@ -187,7 +184,5 @@ img {
 	header p {
 	max-width: none;
 	margin-inline-end: var(--padding);
-}
-
-
+	}
 }
