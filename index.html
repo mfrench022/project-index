@@ -1,93 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<title>Michael’s Index</title>
-	<link href="favicon.ico" rel="icon" sizes="any"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>work | michaelfrench.co</title>
+
+  <link href="favicon.ico" rel="icon" sizes="any"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="favicon.svg" rel="icon" type="image/svg+xml">
 	<link href="touch.png"  rel="apple-touch-icon">
-	<link href="reset.css" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
 
-	<meta property="description" content="Michael French’s work from Typography & Interaction, a year-long course in the Parsons MPS Communication Design program.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/qyq1fyf.css">
+  <!-- <link rel="stylesheet" href="reset.css"> -->
+  <link rel="stylesheet" href="style.css">
 
+  <meta property="description" content="Michael French’s work from Typography & Interaction, a year-long course in the Parsons MPS Communication Design program.">
 	<meta content="https://github.com/mfrench022/project-index/blob/b0cf5574173933fde247be2199f0e76a3413c117/3.png" property="og:image">
 	<meta content="Screenshot of a webpage with the heading 'Typeface as Programme'." property="og:image:alt" >
+
 </head>
-
 <body>
-	<div class ="background"></div>
-	<header>
-		<h1>Michael’s Index<span class ="cursor"> |</span></h1>
-		<p>
-			Here is my work from Typography & Interaction, a year-long course in the Parsons MPS Communication Design program (Class of 2026).
-		</p>
-	</header>
 
-	<section class = "project">
-		<div class="border"></div>
-		<a href = "https://michaelfrench.co/manuscript/" target="_blank">
-			<button>
-				<h2>Project 1: Manuscript</h2>	
-			</button>
-		</a>
-		<p>
-			This project explores the timeline of typographic evolution from the 1800s through the late 1900s, using text excerpts from Ellen Lupton’s <em>Thinking With Type</em>. It features a typographic timeline composed of the typefaces cited within the selected chapters. The selections from Lupton are stylistically contrasted with my personal perspective. 
-		</p>
-		<img src="1.png">
-	</section>
+  <div class="gridbody">
+    <header class="row1 hero-header" data-hero-header>
+      <div class="hero-brand">
+        <div class="name">MICHAEL FRENCH<sup><span> </span>.co</sup></div>
+      </div>
 
-	<section class = "project">
-		<div class="border"></div>
-		<a href = "https://michaelfrench.co/spread/" target="_blank">
-			<button>
-				<h2>Project 2: Spread</h2>
-			</button>
-		</a>
-		<p>
-			This project, a collaboration with Kinza Ghanchi, immerses the reader in the potential user experience challenge they may face as an elder. Using text from Don Norman’s article, <em>I wrote the book on user-friendly design. What I see today horrifies me.</em>, we explore the notion that senior-centric design can optimize user experiences for all. 
-		</p>
-		<img src="2.png">
-	</section>
+      <div class="cd">TYPOGRAPHY<br>& INTERACTION</div>
+    </header>
 
-	<section class = "project">
-		<div class="border"></div>
-		<a href = "https://michaelfrench.co/binding/" target="_blank">
-			<button>
-				<h2>Project 3: Binding</h2>
-			</button>
-		</a>
-		<p>
-			Revisiting <em>Thinking With Type</em> by Ellen Lupton, this project aggregates multiple articles focused on the transition of type from the page to the screen. With addition text excerpts from <em>My Typographies</em> by Paul Elliman and <em>Typeface as Programme</em> by Jürg Lehni, I created a design system to connect the pieces with aesthetics that allude to the grittiness of the hot metal typesetting process.
-		</p>
-		<img src="3.png">
-	</section>
+    <div class="filter-container">
+    
+    <!-- <div class="filter-bar">
+      <h4 class="filter-title">PROJECT FILTERS:</h4>
+      <div class="filter-bar-buttons" role="group" aria-label="Filter by category">
+      <button data-tag="ux/ui"><h3>UX/UI</h3></button>
+      <button data-tag="branding"><h3>BRANDING</h3></button>
+      <button data-tag="motion"><h3>MOTION</h3></button>
+      <button data-tag="code"><h3>CODE/WEB</h3></button>
+      <button data-tag="type"><h3>TYPE</h3></button>
+      </div>
+    </div>
+    </div> -->
 
-	<section class = "project">
-		<div class="border"></div>
-		<a href = "https://michaelfrench.co/links/" target="_blank">
-			<button>
-				<h2>Project 4: Links</h2>
-			</button>
-		</a>
-		<p>
-			This project explores the concept of style as inner logic rather than an external aesthetic. It is based on a collection of materials curated on Are.na by Soko Mungunsukh, with additional contributions from me. The project uses Are.na as a CMS, packaging the content in the form of a fashion mood board.
-		</p>
-		<img src="4.png">
-	</section>
+    <div class="projects">
 
-	<footer>
-		<a href="mailto:michael@michaelfrench.co">
-			<button>
-				<h2>Contact</h2>
-			</button>
-		</a>
-		<a href="https://michaelfrench.co" target="_blank">
-			<button>
-				<h2>Portfolio</h2>
-			</button>
-		</a>
-	</footer>
+      <section class="projectcontainer clickable featured" data-tags="ux/ui branding motion code">
+        <a href ="" class="projectlink">
+        <div class="imagecontainer">
+          <img src="1.png" alt="">
+        </div>
+        <div class="project">
+          <div class = "line"></div>
+          <h3>PROJECT 01: MANUSCRIPT</h3>
+          <p>This project explores the timeline of typographic evolution from the 1800s through the late 1900s, using text excerpts from Ellen Lupton’s <em>Thinking With Type</em>. It features a typographic timeline composed of the typefaces cited within the selected chapters. The selections from Lupton are stylistically contrasted with my personal perspective. </p>
 
+        </div>
+      </a>
+        
+      </section>
+
+      <section class="projectcontainer clickable featured" data-tags="ux/ui branding motion code">
+        <a href ="/gutcheck/" class="projectlink">
+        <div class="imagecontainer">
+          <img src="2.png" alt="">
+        </div>
+        <div class="project">
+          <div class = "line"></div>
+          <h3>PROJECT 02: SPREAD</h3>
+          <p>This project, a collaboration with Kinza Ghanchi, immerses the reader in the potential user experience challenge they may face as an elder. Using text from Don Norman’s article, <em>I wrote the book on user-friendly design. What I see today horrifies me.</em>, we explore the notion that senior-centric design can optimize user experiences for all.</p>
+
+        </div>
+      </a>
+        
+      </section>
+
+      <section class="projectcontainer clickable featured" data-tags="ux/ui branding">
+        <a href ="/parameter/" class="projectlink">
+        <div class="imagecontainer">
+          <img src="3.png" alt="">
+        </div>
+        <div class="project">
+          <div class = "line"></div>
+          <h3>PROJECT 03: BINDING</h3>
+          <p>Revisiting <em>Thinking With Type</em> by Ellen Lupton, this project aggregates multiple articles focused on the transition of type from the page to the screen. With addition text excerpts from <em>My Typographies</em> by Paul Elliman and <em>Typeface as Programme</em> by Jürg Lehni, I created a design system to connect the pieces with aesthetics that allude to the grittiness of the hot metal typesetting process.</p>
+
+        </div>
+      </a>
+        
+      </section>
+
+      <section class="projectcontainer clickable featured" data-tags="ux/ui branding motion">
+        <a href ="/fieldtrip/" class="projectlink">
+        <div class="imagecontainer">
+          <img src="4.png" alt="">
+        </div>
+        <div class="project">
+          <div class = "line"></div>
+          <h3>PROJECT 04: LINKS</h3>
+          <p>This project explores the concept of style as inner logic rather than an external aesthetic. It is based on a collection of materials curated on Are.na by Soko Mungunsukh, with additional contributions from me. The project uses Are.na as a CMS, packaging the content in the form of a fashion mood board.</p>
+
+        </div>
+      </a>
+        
+      </section>
+
+      <section class="projectcontainer clickable featured" data-tags="code type">
+        <a href ="/pansycrazes/" class="projectlink">
+        <div class="imagecontainer">
+          <img src="5.png" alt="">
+        </div>
+        <div class="project">
+          <div class = "line"></div>
+          <h3>PROJECT 05: FUNCTIONS</h3>
+          <p>an interactive timeline of ‘pansy crazes’ (periods of heightened queer visibility) in the united states.</p>
+          
+        </div>
+      </a>
+        
+      </section>
+
+
+    </div>
+
+    <footer>
+      <button><a href="resume/MichaelFrench_Resume_26.pdf" target="_blank"><h3>RÉSUMÉ</h3></a></button>
+      <button><a href="mailto:michael@michaelfrench.co"><h3>CONTACT</h3></a></button>
+      <button><a href="https://www.linkedin.com/in/michael-french-66b8b2169/" target="_blank"><h3>LINKEDIN</h3></a></button>
+      <button><a href="https://www.instagram.com/michaelfrench.co/" target="_blank"><h3>INSTAGRAM</h3></a></button>
+      <h4>SITE DESIGNED + DEVELOPED BY MICHAEL FRENCH</h4>
+    </footer>
+
+
+  </div>
 </body>
 </html>
