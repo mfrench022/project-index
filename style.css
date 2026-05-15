@@ -41,7 +41,10 @@
 			position: relative;
 		}
 
-		h3 { font-weight: 500; }
+		h3 {
+			font-weight: 500;
+			text-transform: uppercase;
+		}
 
 		.row1 {
 			height: calc(4 * var(--padding));
@@ -52,6 +55,8 @@
 		}
 
 		 .name {
+			margin: 0;
+			font-weight: inherit;
 			position: absolute;
 			font-family: aldrich;
 			font-size: var(--wordmark-size);
@@ -63,11 +68,13 @@
 			inset-inline-start: var(--padding);
 			line-height: 0.84;
 			white-space: nowrap;
+			text-transform: uppercase;
 		}
 
 		.name sup {
 			font-size: calc(1em * var(--wordmark-sup-scale));
 			letter-spacing: var(--wordmark-sup-letter-spacing);
+			text-transform: none;
 		}
 
 
@@ -77,6 +84,8 @@
 
 
 		.cd {
+			margin: 0;
+			font-weight: inherit;
 			color: #242424;
 			font-family: aldrich;
 			font-size: var(--wordmark-tag-size);
@@ -88,6 +97,10 @@
 			inset-block-end: calc(1 * var(--padding));
 			transform: translateY(var(--wordmark-tag-axis-shift));
 			text-transform: uppercase;
+		}
+
+		.cd span {
+			display: block;
 		}
 
 		.projects {
@@ -130,6 +143,7 @@
 			color: #242424;
 			padding-block: 0;
 			margin-block: 0;
+			text-transform: uppercase;
 		}
 
 		.filter-container {
