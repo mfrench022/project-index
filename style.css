@@ -1,4 +1,27 @@
+/* Some of this CSS is from my portfolio website, which I started building prior to starting this course. I have tried to refine it as much as possible per everything we have learned this year, but there may still be some weirdness that i missed! */
+		
+		
 		html, body { margin: 0; }
+
+		body {
+			font-family: "franklin-gothic-atf", sans-serif;
+			font-style: normal;
+			color: #242424;
+			line-height: 1.5;
+		}
+
+		em {
+			font-style: italic;
+		}
+
+		sup {
+			vertical-align: super;
+			line-height: 0;
+		}
+
+		h1 {
+			margin: 0;
+		}
 
 		* {
 	box-sizing: border-box;
@@ -11,7 +34,9 @@
 			--radius: 0.7rem;
 			--stroke: 0.15rem;
 			--michael-purple: #4D4356;
-			--wordmark-size: clamp(2.1rem, 5.2vw, 3.95rem);
+			/* Had to look up how to use clamp in order to make the workmarks resize responsively 
+			I referenced MDN documentation for this: https://developer.mozilla.org/en-US/docs/Web/CSS/clamp*/
+			--wordmark-size: clamp(2.1rem, 5.2vw, 3.3rem);
 			--wordmark-stroke: clamp(0.09rem, calc(var(--wordmark-size) * 0.04), 0.16rem);
 			--wordmark-letter-spacing: -0.065em;
 			--wordmark-sup-scale: 0.7;
@@ -42,7 +67,11 @@
 		}
 
 		h3 {
+			font-family: aldrich, sans-serif;
+			font-size: 1em;
 			font-weight: 500;
+			line-height: 1.2;
+			margin: 0;
 			text-transform: uppercase;
 		}
 
@@ -104,9 +133,9 @@
 		}
 
 		.projects {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+			display: block;
 			gap: var(--padding);
+			row-gap: var(--padding);
 			margin-inline-start: var(--padding);
 			margin-inline-end: calc(var(--padding) - 0.15rem);
 			transition: 300ms ease-in-out;
@@ -138,11 +167,13 @@
 		}
 
 		h4 {
-			font-family: aldrich;
+			font-family: aldrich, sans-serif;
 			font-size: 0.8rem;
+			font-weight: inherit;
+			line-height: 1.2;
 			color: #242424;
 			padding-block: 0;
-			margin-block: 0;
+			margin: 0;
 			text-transform: uppercase;
 		}
 
@@ -151,7 +182,7 @@
 			flex-direction: column;
 			row-gap: 0;
 			position: sticky;
-			inset-block-start: var(--sticky-tag-offset, 0px);
+			inset-block-start: var(--sticky-tag-offset, 0rem);
 			z-index: 100;
 		}
 
@@ -177,6 +208,7 @@
 			font-style: normal;
 			font-size: 0.9rem;
 			line-height: 1.1rem;
+			margin: 0;
 		}
 
 		.projectlink {
@@ -203,6 +235,42 @@
 		.projectcontainer {
 			position: relative;
 		}
+
+		.filter-bar {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			column-gap: var(--padding);
+			transition: 300ms ease-in-out;
+			padding-inline: var(--padding);
+			width: 100%;
+			height: 100%;
+			position: sticky;
+			inset-block-start: var(--padding);
+			z-index: 100;
+
+			& button {
+				width: 100%;
+				height: calc(var(--padding) * 1);
+				border-radius: calc(var(--radius)/2);
+				padding-inline: var(--padding);
+			}
+		}
+
+		.filter-container {
+			position: sticky;
+			inset-block-start: 0;
+			z-index: 100;
+			background: linear-gradient(299deg,rgba(245, 245, 245, 1) 0%, rgba(245, 242, 235, 1) 51%, rgba(239, 228, 245, 1) 100%);
+			border-block: var(--stroke) solid #242424;
+			padding-block: calc(var(--padding) / 2);
+		}
+
+		.project h3 {
+			padding-block-end: var(--padding);
+			padding-block-start: calc(var(--padding) / 2);
+		}
+
 
 		.imagecontainer { overflow: hidden; position: relative; transition: 300ms ease-in-out; }
 
@@ -283,11 +351,22 @@
 			text-align: end;
 		}
 
-		@media (max-width: 999px) {
+		@media (width > 1100px) {
+			.row1 .name,
+			.row1 .cd {
+			  inset-block-start: calc(1 * var(--padding));
+			}
+		}
+
+		@media (width < 1000px) {
 			footer {
 				flex-wrap: wrap;
 				justify-content: space-between;
 				row-gap: var(--padding);
+			}
+
+			.projects {
+				padding-block-end: calc(5 * var(--padding));
 			}
 
 			footer h4 {
@@ -300,6 +379,10 @@
 		a {
 			color: inherit;
 			text-decoration: none;
+		}
+
+		img {
+			display: block;
 		}
 
 
