@@ -200,10 +200,10 @@ body {
 		z-index: 100;
 
 		button {
-			width: 100%;
+			width: auto;
 			height: calc(var(--padding) * 1);
 			border-radius: calc(var(--radius) / 2);
-			padding-inline: var(--padding);
+			padding-inline: calc(var(--padding) / 2);
 		}
 	}
 }
