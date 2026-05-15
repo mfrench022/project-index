@@ -39,6 +39,7 @@ body {
 	font-style: normal;
 	color: #242424;
 	line-height: 1.5;
+	scroll-behavior: smooth;
 
 	em {
 		font-style: italic;
@@ -217,6 +218,11 @@ body {
 	padding-block: var(--padding) calc(3 * var(--padding));
 }
 
+.project-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
 .projectcontainer {
 	position: relative;
 
@@ -355,8 +361,18 @@ footer {
 		}
 	}
 
+
+	.filter-container {
+		display: none;
+	}
+
+	.project-grid {
+		grid-template-columns: 1fr;
+	}
+
 	.projects {
 		padding-block-end: calc(5 * var(--padding));
+		padding-block-start: 0;
 	}
 }
 
@@ -380,4 +396,5 @@ footer {
 	footer button {
 		font-size: 0.5rem;
 	}
+
 }
